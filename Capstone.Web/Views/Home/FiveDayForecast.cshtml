@@ -1,0 +1,83 @@
+﻿@model List<Capstone.Web.Models.Weather>
+
+@{
+    ViewBag.Title = "FiveDayForecast";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<div id="leadin">
+    <h2>Five Day Forecast</h2>
+</div>
+
+
+
+
+<table>
+    <tr id="namesRow">
+        <td>Day</td>
+        <td>Low</td>
+        <td>High</td>
+        <td>Forecast</td>
+        <td> </td>
+        <td>Recommendation</td>
+        <td>Temperature Advisory</td>
+    </tr>
+
+    @foreach (var day in Model)
+    {
+        <tr id="forcastTable">
+            <td>@day.ForecastValue</td>
+            <td>@day.ConvertTemp(day.Low)</td>
+            <td>@day.ConvertTemp(day.High)</td>
+            <td>@System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(day.Forecast)</td>
+            <td><img id="forecastPic" src="@("../../Content/img/weather/" + day.Forecast.ToLower() + ".png")" /></td>
+            @{
+                string recommendation = "";
+                if (day.Forecast == "snow")
+                {
+                    recommendation = "Pack Your Snow Shoes";
+                }
+                else if (day.Forecast == "rain")
+                {
+                    recommendation = "Wear Raingear and Pack Waterproof Shoes";
+                }
+                else if (day.Forecast == "thunderstorms")
+                {
+                    recommendation = "Seek Shelter and Avoid Hiking on Exposed Ridges";
+                }
+                else if (day.Forecast == "sunny")
+                {
+                    recommendation = "Pack Your Sunblock";
+                }
+                else if (day.Forecast == "partly cloudy")
+                {
+                    recommendation = "You're Good To Go";
+                }
+                else if (day.Forecast == "cloudy")
+                {
+                    recommendation = "Better take your Prozac!";
+                }
+                <td>@recommendation</td>
+
+            }
+            @{
+                string recommendationTwo = "";
+                if (day.High > 75)
+                {
+                    recommendationTwo = "Bring an Extra Gallon of Water";
+                }
+                else if (day.High - day.Low > 20)
+                {
+                    recommendationTwo = "Wear Breathable Layers";
+                }
+                else if (day.Low < 20)
+                {
+                    recommendationTwo = "It is Dangerous to Expose Yourself to Frigid Temps";
+                }
+
+                <td id="advisory">@recommendationTwo</td>
+
+            }
+        </tr>
+
+                }
+</table>

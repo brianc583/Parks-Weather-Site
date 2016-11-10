@@ -1,0 +1,173 @@
+﻿html {
+    background-color: #002D62;
+}
+
+#logo {
+    width: 30em;
+    height: auto;
+}
+
+#forecastPic {
+    width: 5em;
+    height: auto;
+}
+
+#leadin {
+    color: #FDBB30;
+}
+
+#namesRow {
+    color: #FDBB30;
+}
+
+#forcastTable {
+    color: #002D62;
+}
+
+    #forcastTable:nth-child(even) {
+        background-color: #FDBB30;
+    }
+
+    #forcastTable:nth-child(odd) {
+        background-color: #860038;
+    }
+
+#advisory {
+    color: orangered;
+}
+
+.radioButtons {
+}
+
+#header {
+    background-color: #860038;
+    color: #FDBB30;
+    border-radius:.5em;
+}
+
+.parkTile {
+    display: inline-block;
+    width: 30%;
+    height: 40em;
+    padding: 30px;
+    padding-top: 40px;
+    vertical-align: top;
+    background-color: #FDBB30;
+}
+
+.parkTile img {
+    width:80%;
+    }
+
+.parks {
+    display: inline-block;
+    text-align: center;
+    background-color:;
+}
+
+#description {
+    color: #002D62;
+}
+
+#state {
+}
+
+#survey {
+    font-size: 2em;
+    padding: 1em;
+    background-color: #FDBB30;
+    color: #002D62;
+    position: relative;
+    left: 14em;
+    border-radius: 1em;
+}
+
+#parkImage {
+    display: inline-block;
+}
+
+#parkInfo {
+    display: inline-block;
+}
+
+#bigDiv {
+    display: block;
+    color: #FDBB30;
+}
+
+#forecast {
+    color: #FDBB30;
+    padding: 1em;
+    font-size: 2em;
+    position: relative;
+    left: 40%;
+}
+
+#parkDescription {
+    color: #FDBB30;
+}
+
+.surveyform {
+    color: #FDBB30;
+    outline-color:#FDBB30;
+    outline-style:solid;
+    
+}
+
+#ParkCode {
+    color: #FDBB30;
+    background-color: #860038;
+}
+
+#EmailAddress {
+    color: #FDBB30;
+    background-color: #860038;
+}
+
+#State {
+    color: #FDBB30;
+    background-color: #860038;
+}
+
+#ActivityLevel {
+    color: #FDBB30;
+    background-color: #860038;
+}
+
+button {
+    color: #FDBB30;
+    background-color: #860038;
+}
+
+header button {
+    color: #FDBB30;
+    background-color: #002D62;
+}
+
+#result {
+    background-color:#FDBB30;
+    color: #002D62;
+    border-radius: 1em;
+}
+
+.Sorry {
+    color: #FDBB30;
+    padding:1.5em;
+    background-color: #860038;
+    border-radius:1em;
+    position: relative;
+    left: 1.5em;
+    
+}
+
+.SorryTitle {
+    color: #FDBB30;
+     
+}
+
+#quote {
+    background-color:#FDBB30;
+    border-radius: .5em;
+    color:#860038;
+    font-weight:bolder;
+}

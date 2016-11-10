@@ -1,0 +1,38 @@
+﻿@model Capstone.Web.Models.Park
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div id="bigDiv">
+    <div id="parkImage">
+        <img src="@("../../Content/img/parks/" + Model.ParkCode.ToLower() + ".jpg")" />
+    </div>
+
+    <div id="parkInfo">
+        <h2>@Model.Name</h2>
+        <p>@Model.State</p>
+        <p>Avreage: @Model.Acreage</p>
+        <p>Elevation: @Model.Elevation</p>
+        <p>Miles Of Trail: @Model.MilesOfTrail</p>
+        <p>Campsites: @Model.NumberOfCampsites</p>
+        <p>Climate: @Model.Climate</p>
+        <p>Founded: @Model.YearFounded</p>
+        <p>Yearly Visitors: @Model.AnnualVisitorCount</p>
+        <p>Admission Fee: @Model.EntryFee.ToString("C")</p>
+    </div>
+</div>
+
+
+<div id="parkDescription">
+    <p>@Model.Description</p>
+    <p id="quote">@Model.Quote -@Model.QuoteSource</p>
+</div>
+
+
+
+
+
+
+
+<a href="@Url.Action("FiveDayForecast", "Home", new { id = Model.ParkCode })" id="forecast">See The Five Day Forecast</a>

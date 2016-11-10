@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ParkGeek</title>
+    <link rel="stylesheet" href="~/Content/parkgeek.css">
+</head>
+<body>
+    <header id="header">
+        <a href ="@Url.Action("Index", "Home")"><img id="logo" src="~/Content/img/logo.png" /></a>
+        <a href ="@Url.Action("GoToSurvey", "Home")" id="survey">Take our Survey!</a>
+        @using (Html.BeginForm("SetTemperaturePreference", "Home", FormMethod.Post))
+        {
+            <p class="radioButtons">Fahrenheit @Html.RadioButton("TempType", "F")</p>
+            <p class="radioButtons">Celsius @Html.RadioButton("TempType", "C")</p>
+            <button id="surveyButton">Submit</button>
+        }
+        <h1>National Park Weather Service</h1>
+        <p>Welcome to the national park service site.</p>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

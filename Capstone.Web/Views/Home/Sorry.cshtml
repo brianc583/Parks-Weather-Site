@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Sorry";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2 class ="SorryTitle">Sorry You May Only Take The Survey Once Per day.</h2>
+
+<div>
+    <a class="Sorry" href="@Url.Action("Index", "Home")">Return To Homepage</a>
+    <a class="Sorry" href="@Url.Action("SurveyResult", "Home")">See Survey Results</a>
+</div>

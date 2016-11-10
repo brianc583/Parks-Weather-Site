@@ -1,0 +1,30 @@
+﻿@model List<Capstone.Web.Models.Park>
+@{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+
+}
+
+<section class="parks">
+
+    
+    @foreach (var park in Model)
+    {
+        //<section class="park"> 
+            
+            <div class="parkTile">
+                <h2>@park.Name</h2>
+                <a href="@Url.Action("Detail", "Home", new { id = park.ParkCode })">
+                    <img src="@("../Content/img/parks/" + park.ParkCode + ".jpg")" />
+                </a>
+                <p id="state">@park.State</p>
+                <p id="description">@park.Description</p>
+            </div>
+            
+        //</section>
+    }
+
+    
+
+   
+</section>
+
